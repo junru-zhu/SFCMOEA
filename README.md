@@ -11,6 +11,7 @@ SFCMOEA combines structural feature node extraction, maximal-clique representati
 
 ## Read and cite
 
+- [All publications by Junru Zhu](https://junru-zhu.github.io/)
 - [Paper companion](https://junru-zhu.github.io/SFCMOEA/)
 - [Publisher page](https://doi.org/10.32604/cmc.2025.073572)
 - [Full-text PDF](https://cdn.techscience.press/files/cmc/2026/TSP_CMC-87-1/TSP_CMC_73572/TSP_CMC_73572.pdf)
