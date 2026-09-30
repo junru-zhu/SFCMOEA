@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#10243d"/>
+  <circle cx="1040" cy="86" r="180" fill="#35c4d7" opacity=".16"/>
+  <circle cx="980" cy="510" r="220" fill="#ff8959" opacity=".15"/>
+  <circle cx="740" cy="220" r="190" fill="#f3c35b" opacity=".11"/>
+  <g fill="none" stroke="#7c8da2" stroke-width="4" opacity=".88">
+    <path d="M810 170 900 112 994 185 946 278 836 264 810 170M900 112 946 278M994 185 836 264"/>
+    <path d="M836 264 946 278 1007 381 930 466 818 418 768 326 836 264M946 278 818 418M1007 381 768 326"/>
+    <path d="M810 170 744 104M900 112 916 43M994 185 1090 164M1007 381 1100 424M930 466 945 556M818 418 748 500M768 326 681 342"/>
+  </g>
+  <g fill="#fff" stroke="#10243d" stroke-width="5">
+    <circle cx="810" cy="170" r="14"/><circle cx="900" cy="112" r="14"/>
+    <circle cx="994" cy="185" r="14"/><circle cx="946" cy="278" r="18" fill="#1769e0" stroke="#fff"/>
+    <circle cx="836" cy="264" r="18" fill="#1769e0" stroke="#fff"/>
+    <circle cx="744" cy="104" r="11"/><circle cx="916" cy="43" r="11"/><circle cx="1090" cy="164" r="11"/>
+    <circle cx="1007" cy="381" r="14"/><circle cx="930" cy="466" r="14"/>
+    <circle cx="818" cy="418" r="14"/><circle cx="768" cy="326" r="14"/>
+    <circle cx="1100" cy="424" r="11"/><circle cx="945" cy="556" r="11"/>
+    <circle cx="748" cy="500" r="11"/><circle cx="681" cy="342" r="11"/>
+  </g>
+  <text x="78" y="105" fill="#35c4d7" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="3">OPEN-ACCESS PAPER · 2026</text>
+  <text x="78" y="205" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="600">SFCMOEA</text>
+  <text x="78" y="274" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="700">Overlapping community detection</text>
+  <text x="78" y="321" fill="#b9c6d5" font-family="Arial, Helvetica, sans-serif" font-size="30">with structural feature nodes, maximal cliques,</text>
+  <text x="78" y="362" fill="#b9c6d5" font-family="Arial, Helvetica, sans-serif" font-size="30">and hybrid MOEA/D</text>
+  <rect x="78" y="420" width="420" height="74" rx="10" fill="#1769e0"/>
+  <text x="111" y="468" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">Best Q on 9 / 12 real networks</text>
+  <text x="78" y="555" fill="#8fa0b4" font-family="Arial, Helvetica, sans-serif" font-size="23">doi.org/10.32604/cmc.2025.073572</text>
+</svg>

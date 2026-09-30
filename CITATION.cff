@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If SFCMOEA is useful in your research, please cite the journal article below."
+title: "SFCMOEA paper companion"
+type: software
+authors:
+  - family-names: Zhu
+    given-names: Junru
+repository-code: "https://github.com/junru-zhu/SFCMOEA"
+url: "https://junru-zhu.github.io/SFCMOEA/"
+license: MIT
+preferred-citation:
+  type: article
+  title: "A Hybrid Clique-Based Method with Structural Feature Node Extraction for Community Detection in Overlapping Networks"
+  authors:
+    - family-names: Ma
+      given-names: Sicheng
+    - family-names: Zhang
+      given-names: Lixiang
+    - family-names: Chen
+      given-names: Guocai
+    - family-names: Dai
+      given-names: Zeyu
+    - family-names: Zhu
+      given-names: Junru
+    - family-names: Fang
+      given-names: Wei
+  journal: "Computers, Materials & Continua"
+  volume: 87
+  issue: 1
+  year: 2026
+  doi: "10.32604/cmc.2025.073572"

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SFCMOEA — Overlapping Community Detection with Structural Feature Nodes and Maximal Cliques</title>
+  <meta name="description" content="Paper companion for SFCMOEA, a hybrid clique-based multi-objective evolutionary method for overlapping community detection.">
+  <meta name="keywords" content="overlapping community detection, SFCMOEA, graph embedding, maximal clique, MOEA/D, evolutionary computation, complex networks">
+  <meta name="author" content="Sicheng Ma, Lixiang Zhang, Guocai Chen, Zeyu Dai, Junru Zhu, Wei Fang">
+  <meta name="citation_title" content="A Hybrid Clique-Based Method with Structural Feature Node Extraction for Community Detection in Overlapping Networks">
+  <meta name="citation_author" content="Sicheng Ma">
+  <meta name="citation_author" content="Lixiang Zhang">
+  <meta name="citation_author" content="Guocai Chen">
+  <meta name="citation_author" content="Zeyu Dai">
+  <meta name="citation_author" content="Junru Zhu">
+  <meta name="citation_author" content="Wei Fang">
+  <meta name="citation_publication_date" content="2026/02/10">
+  <meta name="citation_journal_title" content="Computers, Materials &amp; Continua">
+  <meta name="citation_volume" content="87">
+  <meta name="citation_issue" content="1">
+  <meta name="citation_doi" content="10.32604/cmc.2025.073572">
+  <meta name="citation_pdf_url" content="https://cdn.techscience.press/files/cmc/2026/TSP_CMC-87-1/TSP_CMC_73572/TSP_CMC_73572.pdf">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SFCMOEA: Structural Feature Nodes + Maximal Cliques for Overlapping Community Detection">
+  <meta property="og:description" content="A hybrid MOEA/D method that narrows the search space, detects overlap through maximal cliques, and achieved the best Q on 9 of 12 real-world networks.">
+  <meta property="og:url" content="https://junru-zhu.github.io/SFCMOEA/">
+  <meta property="og:image" content="https://junru-zhu.github.io/SFCMOEA/assets/social-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SFCMOEA for Overlapping Community Detection">
+  <meta name="twitter:description" content="Structural feature node extraction, maximal cliques, and hybrid MOEA/D in one community detection method.">
+  <meta name="twitter:image" content="https://junru-zhu.github.io/SFCMOEA/assets/social-card.png">
+  <link rel="canonical" href="https://junru-zhu.github.io/SFCMOEA/">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "A Hybrid Clique-Based Method with Structural Feature Node Extraction for Community Detection in Overlapping Networks",
+    "datePublished": "2026-02-10",
+    "identifier": "https://doi.org/10.32604/cmc.2025.073572",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "author": [
+      {"@type": "Person", "name": "Sicheng Ma"},
+      {"@type": "Person", "name": "Lixiang Zhang"},
+      {"@type": "Person", "name": "Guocai Chen"},
+      {"@type": "Person", "name": "Zeyu Dai"},
+      {"@type": "Person", "name": "Junru Zhu"},
+      {"@type": "Person", "name": "Wei Fang"}
+    ],
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "Computers, Materials & Continua",
+      "issn": "1546-2226"
+    },
+    "keywords": [
+      "overlapping community detection",
+      "graph embedding",
+      "multi-objective evolutionary algorithm",
+      "maximal cliques",
+      "link strength"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="SFCMOEA home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>SFCMOEA</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#method">Method</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#cite">Cite</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="journal">Computers, Materials &amp; Continua · 2026 · Open access</p>
+        <h1>Find overlapping communities by searching the nodes that carry structure.</h1>
+        <p class="lead">
+          SFCMOEA combines structural feature node extraction, maximal-clique representation,
+          and hybrid MOEA/D to reduce the search space while preserving overlapping community structure.
+        </p>
+        <p class="authors">
+          Sicheng Ma · Lixiang Zhang · Guocai Chen · Zeyu Dai ·
+          <strong>Junru Zhu</strong> · Wei Fang
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://doi.org/10.32604/cmc.2025.073572">Read the paper</a>
+          <a class="button secondary" href="https://cdn.techscience.press/files/cmc/2026/TSP_CMC-87-1/TSP_CMC_73572/TSP_CMC_73572.pdf">Download PDF</a>
+          <button class="button quiet" type="button" data-copy-target="bibtex">Copy BibTeX</button>
+        </div>
+        <p class="doi">DOI: 10.32604/cmc.2025.073572</p>
+      </div>
+
+      <div class="hero-visual" aria-label="Illustration of overlapping network communities">
+        <svg viewBox="0 0 640 500" role="img" aria-labelledby="network-title network-desc">
+          <title id="network-title">Overlapping community network</title>
+          <desc id="network-desc">Three communities share structural feature nodes and clique bridges.</desc>
+          <defs>
+            <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#11263f" flood-opacity=".14"/>
+            </filter>
+          </defs>
+          <g class="community community-a">
+            <path d="M88 174C112 79 222 45 302 103c57 42 56 135 2 183-68 60-185 31-216-50-7-19-7-42 0-62Z"/>
+          </g>
+          <g class="community community-b">
+            <path d="M279 90c92-40 204 19 214 113 8 78-70 145-151 124-86-22-135-113-90-190 7-13 16-31 27-47Z"/>
+          </g>
+          <g class="community community-c">
+            <path d="M217 250c56-51 158-42 204 18 51 67 8 164-73 190-86 28-180-20-190-102-5-39 17-78 59-106Z"/>
+          </g>
+          <g class="edges">
+            <path d="M152 155 219 124 281 172 231 229 152 155M219 124 231 229M281 172 152 155"/>
+            <path d="M281 172 364 119 430 181 390 245 316 236 281 172M364 119 390 245M430 181 316 236"/>
+            <path d="M231 229 316 236 365 305 322 376 238 348 205 284 231 229M316 236 238 348M365 305 205 284"/>
+            <path d="M152 155 116 226M219 124 196 79M364 119 417 83M430 181 499 212M390 245 459 286M365 305 420 369M322 376 343 430M238 348 194 410M205 284 134 320"/>
+          </g>
+          <g class="nodes">
+            <circle cx="152" cy="155" r="11"/><circle cx="219" cy="124" r="11"/>
+            <circle cx="281" cy="172" r="14" class="feature-node"/>
+            <circle cx="231" cy="229" r="14" class="feature-node"/>
+            <circle cx="116" cy="226" r="9"/><circle cx="196" cy="79" r="9"/>
+            <circle cx="364" cy="119" r="11"/><circle cx="430" cy="181" r="11"/>
+            <circle cx="390" cy="245" r="11"/>
+            <circle cx="316" cy="236" r="14" class="feature-node"/>
+            <circle cx="417" cy="83" r="9"/><circle cx="499" cy="212" r="9"/>
+            <circle cx="459" cy="286" r="9"/>
+            <circle cx="365" cy="305" r="11"/><circle cx="322" cy="376" r="11"/>
+            <circle cx="238" cy="348" r="11"/><circle cx="205" cy="284" r="11"/>
+            <circle cx="420" cy="369" r="9"/><circle cx="343" cy="430" r="9"/>
+            <circle cx="194" cy="410" r="9"/><circle cx="134" cy="320" r="9"/>
+          </g>
+          <g class="visual-label" filter="url(#soft-shadow)">
+            <rect x="312" y="32" width="230" height="54" rx="12"/>
+            <circle cx="340" cy="59" r="8"/>
+            <text x="360" y="65">structural feature nodes</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Key evidence">
+      <div><strong>9 / 12</strong><span>real networks with the best reported Q</span></div>
+      <div><strong>5 scales</strong><span>of LFR synthetic benchmarks</span></div>
+      <div><strong>2 large</strong><span>real collaboration networks</span></div>
+      <div><strong>≈50%</strong><span>node-use savings even at small scale</span></div>
+    </section>
+
+    <section class="method-section" id="method">
+      <div class="section-heading">
+        <h2>A three-stage route from graph structure to overlapping partitions</h2>
+        <p>The method focuses evolutionary search where the network carries the strongest structural signal.</p>
+      </div>
+      <ol class="method-flow">
+        <li>
+          <span class="step">01</span>
+          <div>
+            <h3>Extract structural feature nodes</h3>
+            <p>Map nodes into a structural embedding space, measure similarity with Minkowski distance, and retain the nodes most useful for partition search.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step">02</span>
+          <div>
+            <h3>Represent overlap with maximal cliques</h3>
+            <p>Search maximal cliques in the selected vertex set and use link strength to merge or preserve clique structure.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step">03</span>
+          <div>
+            <h3>Optimize with hybrid MOEA/D</h3>
+            <p>Evolve clique-based individuals while assigning unexplored nodes separately, balancing intracommunity density and intercommunity separation.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="evidence-section" id="evidence">
+      <div class="evidence-copy">
+        <h2>Where the paper is useful</h2>
+        <p>
+          Cite this work when you need a baseline or related method for overlapping community detection,
+          evolutionary community search, clique-based representation, or structural-node selection.
+        </p>
+        <ul>
+          <li>Overlapping community detection in complex networks</li>
+          <li>MOEA/D and multi-objective community optimization</li>
+          <li>Maximal-clique encoding and link-strength allocation</li>
+          <li>Graph embedding for search-space reduction</li>
+          <li>Community-count-aware evaluation with fNMI</li>
+        </ul>
+      </div>
+      <div class="result-panel">
+        <p class="panel-label">Reported comparison</p>
+        <h3>Broad gains in partition quality, with an explicit runtime trade-off.</h3>
+        <p>
+          SFCMOEA reported the best maximum and average extended modularity on nine of twelve
+          real-world networks. It was faster than the compared clique-based and similarity-based
+          MOEA methods, while traditional and shallow embedding baselines remained faster.
+        </p>
+        <a href="https://doi.org/10.32604/cmc.2025.073572">Inspect the full tables and settings →</a>
+      </div>
+    </section>
+
+    <section class="citation-section" id="cite">
+      <div class="section-heading">
+        <h2>Use the canonical citation</h2>
+        <p>Copy BibTeX or download a citation file for your reference manager.</p>
+      </div>
+      <div class="citation-box">
+        <pre id="bibtex">@article{Ma2026SFCMOEA,
+  title   = {A Hybrid Clique-Based Method with Structural Feature Node Extraction for Community Detection in Overlapping Networks},
+  author  = {Ma, Sicheng and Zhang, Lixiang and Chen, Guocai and Dai, Zeyu and Zhu, Junru and Fang, Wei},
+  journal = {Computers, Materials \&amp; Continua},
+  volume  = {87},
+  number  = {1},
+  year    = {2026},
+  doi     = {10.32604/cmc.2025.073572}
+}</pre>
+        <div class="citation-actions">
+          <button class="button primary" type="button" data-copy-target="bibtex">Copy BibTeX</button>
+          <a class="button secondary" href="citation.bib" download>Download .bib</a>
+          <a class="button secondary" href="citation.ris" download>Download .ris</a>
+        </div>
+        <p class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="followup-section">
+      <div>
+        <h2>Follow-on application</h2>
+        <p>
+          The paper’s clique and structural-feature perspective also motivates later work on
+          mesoscopic community features under distribution shift in Android malware graphs.
+        </p>
+      </div>
+      <a href="https://arxiv.org/abs/2609.25256">Read the 2026 follow-on preprint →</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Paper content is available under CC BY 4.0. Companion maintained by Junru Zhu.</p>
+    <div>
+      <a href="https://www.sciopen.com/article/10.32604/cmc.2025.073572">SciOpen</a>
+      <a href="https://github.com/junru-zhu/SFCMOEA">GitHub</a>
+      <a href="https://doi.org/10.32604/cmc.2025.073572">DOI</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
